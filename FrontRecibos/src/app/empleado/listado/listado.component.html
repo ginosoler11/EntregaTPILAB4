@@ -1,0 +1,42 @@
+<app-sidebar></app-sidebar>
+<div id="content">
+  <div class="row">
+    <div class="col-lg-10 col-md-12 mx-auto">
+      <div class="table-wrapper" id="example">
+        <div class="table-title">
+          <div class="row">
+            <div
+              class="col-sm-6 p-0 d-flex justify-content-lg-start justify-content-center"
+            >
+              <h2 class="ml-lg-2">Listado de Empleados</h2>
+            </div>
+          </div>
+        </div>
+        <table class="table table-striped table-hover table-bordered mt-3">
+          <thead>
+            <tr>
+              <th scope="col">Legajo</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Área</th>
+              <th scope="col">Fecha de Nacimiento</th>
+              <th scope="col">Antigüedad</th>
+              <th scope="col">Sueldo Bruto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let e of empleados">
+              <td>{{ e.legajo }}</td>
+              <td>{{ e.nombre }}</td>
+              <td>{{ e.apellido }}</td>
+              <td>{{ e.area }}</td>
+              <td>{{ e.fechaNacimiento }}</td>
+              <td>{{ e.antiguedad }}</td>
+              <td>{{ e.sueldoBruto | currency: "ARS" }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

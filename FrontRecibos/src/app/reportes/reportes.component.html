@@ -1,0 +1,73 @@
+<app-sidebar></app-sidebar>
+<div id="content">
+  <div class="row">
+    <div class="container-fluid">
+      <div class="pl-5">
+        <div class="contenedor col-lg-12">
+          <h1 class="text-center justify-content-center mt-3">REPORTE</h1>
+          <div class="text-start cuerpo mt-5">
+            <h5>
+              Reporte que genera la sumatoria de sueldos netos agrupados por
+              área, según un periodo de tiempo determinado.
+            </h5>
+          </div>
+          <div class="text-start cuerpo mt-5">
+            <form [formGroup]="formulario">
+              <div class="row col-12 d-flex">
+                <div class="mb-3 col-4 d-column">
+                  <label class="form-label">Año</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    formControlName="ano"
+                    maxlength="4"
+                  />
+                  <div
+                    class="alert alert-danger"
+                    role="alert"
+                    *ngIf="
+                      formulario.get('ano')?.invalid &&
+                      formulario.get('ano')?.touched
+                    "
+                  >
+                    El año es requerido
+                  </div>
+                </div>
+                <div class="mb-3 col-4 d-column">
+                  <label class="form-label">Mes</label>
+
+                  <select class="form-control" formControlName="mes">
+                    <option [ngValue]="m.numero" *ngFor="let m of meses">
+                      {{ m.mes }}
+                    </option>
+                  </select>
+                  <div
+                    class="alert alert-danger"
+                    role="alert"
+                    *ngIf="
+                      formulario.get('mes')?.invalid &&
+                      formulario.get('mes')?.touched
+                    "
+                  >
+                    El mes es requerido
+                  </div>
+                </div>
+                <div class="mb-3 col-4">
+                  <button
+                    class="btn btn-primary btn-generar"
+                    (click)="generarGraficoReporte()"
+                  >
+                    Generar reporte
+                  </button>
+                </div>
+              </div>
+            </form>
+            <div class="container mt-5" id="canvas-wrapper">
+              <canvas id="pieChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

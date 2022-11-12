@@ -1,0 +1,39 @@
+.entero {
+  margin-left: 13%;
+  margin-bottom: 20px;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+.contenedor {
+  margin-top: 20px;
+}
+
+.cuerpo {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.cuerpo li {
+  margin-top: 8px;
+  font-weight: 400;
+}
+
+ul .desplegable {
+  list-style-type: square;
+}
+
+.img {
+  width: 100%;
+  margin-left: 15px;
+  height: 120px;
+}
+
+.title-li {
+  font-size: 20px;
+}
+
+li small {
+  text-decoration: none;
+  cursor: text;
+  color: rgb(72, 96, 230);
+}

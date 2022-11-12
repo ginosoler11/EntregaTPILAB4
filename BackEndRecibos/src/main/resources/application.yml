@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mariadb://localhost/Recibos
+    username: root
+    password: 3793

@@ -1,0 +1,35 @@
+.contenedor {
+  margin-left: 10%;
+  margin-top: 20px;
+}
+
+.cuerpo {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.cuerpo li {
+  margin-top: 8px;
+  font-weight: 400;
+}
+
+ul .desplegable {
+  list-style-type: square;
+}
+
+.title-li {
+  font-size: 20px;
+}
+
+li small {
+  text-decoration: none;
+  cursor: text;
+  color: rgb(72, 96, 230);
+}
+
+.btn-generar {
+  margin-top: 30px;
+}
+#canvas-wrapper{
+  width: 30%;
+}

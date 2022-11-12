@@ -1,0 +1,190 @@
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4 {
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+p {
+  font-size: 15px;
+  margin: 12px 0 0;
+  line-height: 24px;
+}
+
+a {
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+button:focus {
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul,
+ol {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+a:hover,
+a:focus {
+  color: #333;
+  text-decoration: none;
+  /* transition: all 0.3s; */
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  overflow: auto;
+}
+
+/*=========sidebar---design------*/
+
+#sidebar {
+  position: fixed;
+  height: 100% !important;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 11;
+  width: 240px;
+  overflow: auto;
+  transition: all 0.3s;
+  background-color: #000;
+  box-shadow: 0 0 30px 0 rgba(200 200 200 / 20%);
+}
+
+@media only screen and (min-width: 992px) {
+  #sidebar.active {
+    left: -260px;
+    height: 100% !important;
+    position: absolute !important;
+    overflow: visible !important;
+    top: 0;
+    z-index: 666;
+    float: left !important;
+    bottom: 0 !important;
+  }
+
+  #content {
+    width: calc(100% - 260px);
+    position: relative;
+    float: right;
+    transition: all 0.3s;
+  }
+
+  #content.active {
+    width: 100%;
+  }
+}
+
+#sidebar::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+  background-color: #eee;
+  display: none;
+}
+
+#sidebar::-webkit-scrollbar-thumbs {
+  width: 5px;
+  border-radius: 10px;
+  background-color: #333;
+  display: none;
+}
+
+#sidebar:hover::-webkit-scrollbar-thumbs {
+  display: block;
+}
+
+/* #sidebar:hover::-webkit-scrollbar {
+  display: block;
+} */
+
+#sidebar .sidebar-header {
+  background-color: #000;
+  border-bottom: 1px solid #eee;
+}
+
+#sidebar ul li {
+  padding: 2px 0px;
+}
+
+#sidebar ul li.active {
+  background-color: #dbe5fd;
+  color: #fff;
+}
+
+#sidebar ul li a:hover {
+  color: #000;
+  background-color: #bdbfc2;
+}
+
+.dropdown-toggle::after {
+  position: absolute;
+  right: 22px;
+  top: 18px;
+  color: #777777;
+}
+
+#sidebar ul li.dropdown {
+  position: sticky;
+}
+
+#sidebar ul.component {
+  padding: 20px 0px;
+}
+
+#sidebar ul li a {
+  padding: 5px 10px 5px 20px;
+  line-height: 30px;
+  font-size: 14px;
+  position: relative;
+  font-weight: 400;
+  display: block;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+#sidebar ul li a i {
+  position: relative;
+  margin-right: 10px;
+  top: 6px;
+}
+
+/*=========sidebar---design- end-----*/
+/* ----------------------- extras mios */
+
+.a-salir {
+  cursor: pointer;
+}
+
+.mi-cuenta {
+  color: rgb(69, 103, 214);
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.hr-sidebar {
+  border-bottom: 1px solid #eee;
+}
+
+.img-logo {
+  width: 70%;
+  filter: invert(86%);
+}

@@ -1,0 +1,101 @@
+<nav id="sidebar">
+  <div class="sidebar-header p-3 text-center">
+    <img src="assets/logo-utn.png" alt="" class="img-logo" />
+  </div>
+  <ul class="list-unstyled components">
+    <!-- --------------------------------------- CUENTA --------------------------------->
+
+    <li class="desactive pt-2">
+      <span class="mi-cuenta">Cuenta</span>
+    </li>
+    <!-- ---------------------------------------- HOME -->
+    <li class="dropdown">
+      <a aria-expanded="false" class="d-flex enlace" routerLink="">
+        <i class="fa-solid fa-house"></i><span class="enlace">Inicio </span>
+      </a>
+    </li>
+    <hr class="hr-sidebar" />
+    <!-- ------------------------------------- SERVICIOS ---------------------------- -->
+
+    <li class="desactive pt-2">
+      <span class="mi-cuenta">Servicios</span>
+    </li>
+
+    <!-- ------------------------------- EMPLEADOS -->
+
+    <li class="dropdown" id="idEmpleados">
+      <a
+        href="#homeSubmenu3"
+        data-toggle="collapse"
+        aria-expanded="false"
+        class="dropdown-toggle d-flex enlace"
+      >
+        <i class="fa-solid fa-user-tie"></i>Empleados</a
+      >
+      <ul class="collapse list-unstyled menu pl-3" id="homeSubmenu3">
+        <li>
+          <a
+            href=""
+            class="d-flex enlace"
+            routerLink="/nuevo-empleado"
+            routerLinkActive="active"
+            ><i class="fa-solid fa-user-plus"></i>Nuevo Empleado</a
+          >
+        </li>
+        <li>
+          <a
+            href=""
+            class="d-flex enlace"
+            routerLink="/listado-empleados"
+            routerLinkActive="active"
+            ><i class="fa-solid fa-list"></i>Listado de Empleados</a
+          >
+        </li>
+      </ul>
+    </li>
+
+    <!-- ------------------------------------ RECIBOS DE SUELDO -->
+    <li class="dropdown">
+      <a
+        href="#homeSubmenu1"
+        data-toggle="collapse"
+        aria-expanded="false"
+        class="dropdown-toggle d-flex enlace"
+      >
+        <i class="fa-solid fa-file-lines"></i
+        ><span class="enlace">Recibos de sueldo </span>
+      </a>
+      <ul class="collapse list-unstyled menu pl-3" id="homeSubmenu1">
+        <li>
+          <a
+            href=""
+            class="d-flex enlace"
+            routerLink="/nuevo-recibo"
+            routerLinkActive="active"
+            ><i class="fa-sharp fa-solid fa-credit-card"></i>Nuevo recibo de
+            sueldo</a
+          >
+        </li>
+        <li>
+          <a
+            href=""
+            class="d-flex enlace"
+            routerLink="/listado-recibos"
+            routerLinkActive="active"
+            ><i class="fa-solid fa-list"></i>Recibos de sueldo</a
+          >
+        </li>
+      </ul>
+    </li>
+
+    <!-- ------------------------------------ REPORTES -->
+    <li class="dropdown">
+      <a aria-expanded="false" class="d-flex enlace" routerLink="/reportes">
+        <i class="fa-solid fa-file-pen"></i
+        ><span class="enlace">Reportes </span>
+      </a>
+    </li>
+
+    <hr class="hr-sidebar" />
+  </ul>
+</nav>
